@@ -1,0 +1,50 @@
+{
+    "name": "ionbytes/hades",
+    "description": "A high-performance PHP database abstract layer with Object-Oriented API and more many features.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "database",
+        "mysql",
+        "mariadb",
+        "pgsql",
+        "postgresql",
+        "querybuilder",
+        "pdo",
+        "sql",
+        "sqlite"
+    ],
+    "support": {
+        "issues": "https://github.com/ionbytes/hades/issues",
+        "source": "https://github.com/ionbytes/hades"
+    },
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "ionbytes/coding-standard": "dev-master",
+        "phpstan/phpstan": "2.0.x-dev",
+        "phpunit/phpunit": "^11.2-dev"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "IonBytes\\Hades\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IonBytes\\Hades\\Tests\\Unit\\": "tests/unit/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.2.0"
+        },
+        "sort-packages": true
+    }
+}
