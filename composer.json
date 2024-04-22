@@ -23,6 +23,7 @@
     },
     "require-dev": {
         "ionbytes/coding-standard": "dev-master",
+        "jetbrains/phpstorm-attributes": "dev-master",
         "phpstan/phpstan": "2.0.x-dev",
         "phpunit/phpunit": "^11.2-dev"
     },
