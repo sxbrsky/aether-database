@@ -1,15 +1,15 @@
 <?php
 
 /*
- * This file is part of the ionbytes/hades.
+ * This file is part of the nuldark/hades.
  *
- * Copyright (C) 2024 IonBytes Development Team
+ * Copyright (C) 2024 Dominik Szamburski
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace IonBytes\Hades\Driver;
+namespace Hades\Driver;
 
 use JetBrains\PhpStorm\Language;
 use SensitiveParameter;
@@ -28,7 +28,7 @@ interface Driver
      * Prepares a statement for execution and returns a <b>Statement</b> object
      *
      * @param string $sql The SQL statement to prepare.
-     * @return \IonBytes\Hades\Driver\Statement <b>Driver::prepare</b> returns a <b>Statement</b> object.
+     * @return \Hades\Driver\Statement <b>Driver::prepare</b> returns a <b>Statement</b> object.
      */
     public function prepare(#[Language('SQL')] string $sql): Statement;
 
@@ -36,7 +36,7 @@ interface Driver
      * Executes an SQL statement, returning a result set <b>Result</b> object.
      *
      * @param string $sql The SQL statement to prepare and execute.
-     * @return \IonBytes\Hades\Driver\Result <b>Driver::query</b> returns a <b>Result</b> object.
+     * @return \Hades\Driver\Result <b>Driver::query</b> returns a <b>Result</b> object.
      */
     public function query(#[Language('SQL')] string $sql): Result;
 

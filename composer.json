@@ -1,5 +1,5 @@
 {
-    "name": "ionbytes/hades",
+    "name": "nuldark/hades",
     "description": "A high-performance PHP database abstract layer with Object-Oriented API and more many features.",
     "license": "MIT",
     "type": "library",
@@ -15,33 +15,30 @@
         "sqlite"
     ],
     "support": {
-        "issues": "https://github.com/ionbytes/hades/issues",
-        "source": "https://github.com/ionbytes/hades"
+        "issues": "https://github.com/nuldark/hades/issues",
+        "source": "https://github.com/nuldark/hades"
     },
     "require": {
         "php": ">=8.2"
     },
     "require-dev": {
-        "ionbytes/coding-standard": "dev-master",
         "jetbrains/phpstorm-attributes": "dev-master",
         "phpstan/phpstan": "2.0.x-dev",
-        "phpunit/phpunit": "^11.2-dev"
+        "phpunit/phpunit": "^11.1.x-dev",
+        "squizlabs/php_codesniffer": "4.0.x-dev"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "IonBytes\\Hades\\": "src/"
+            "Hades\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IonBytes\\Hades\\Tests\\Unit\\": "tests/unit/"
+            "Hades\\Tests\\Unit\\": "tests/unit/"
         }
     },
     "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
-        },
         "optimize-autoloader": true,
         "platform": {
             "php": "8.2.0"

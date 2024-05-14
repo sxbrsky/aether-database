@@ -1,15 +1,15 @@
 <?php
 
 /*
- * This file is part of the ionbytes/hades.
+ * This file is part of the nuldark/hades.
  *
- * Copyright (C) 2024 IonBytes Development Team
+ * Copyright (C) 2024 Dominik Szamburski
  *
  * This software may be modified and distributed under the terms
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace IonBytes\Hades\Driver;
+namespace Hades\Driver;
 
 interface Exception extends \Throwable
 {
