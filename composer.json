@@ -1,5 +1,5 @@
 {
-    "name": "nuldark/hades",
+    "name": "nulxrd/hades",
     "description": "A high-performance PHP database abstract layer with Object-Oriented API and more many features.",
     "license": "MIT",
     "type": "library",
@@ -15,8 +15,8 @@
         "sqlite"
     ],
     "support": {
-        "issues": "https://github.com/nuldark/hades/issues",
-        "source": "https://github.com/nuldark/hades"
+        "issues": "https://github.com/nulxrd/hades/issues",
+        "source": "https://github.com/nulxrd/hades"
     },
     "require": {
         "php": ">=8.2"
