@@ -14,9 +14,8 @@ composer.lock
 coverage/
 phpunit.xml
 
-# phpcs
-.phpcs.cache
-phpcs.xml
+# php-cs-fixer
+.php-cs-fixer.cache
 
 # phpstan
 phpstan.neon

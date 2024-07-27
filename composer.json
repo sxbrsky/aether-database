@@ -22,10 +22,10 @@
         "php": ">=8.2"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "dev-master",
         "jetbrains/phpstorm-attributes": "dev-master",
         "phpstan/phpstan": "2.0.x-dev",
-        "phpunit/phpunit": "^11.1.x-dev",
-        "squizlabs/php_codesniffer": "4.0.x-dev"
+        "phpunit/phpunit": "^11.1.x-dev"
     },
     "minimum-stability": "dev",
     "autoload": {

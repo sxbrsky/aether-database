@@ -23,21 +23,24 @@ final class DriverManager implements DriverManagerInterface
     /**
      * @inheritDoc
      */
-    public function all(): array {
+    public function all(): array
+    {
         return $this->drivers;
     }
 
     /**
      * @inheritDoc
      */
-    public function get(string $name): Driver {
+    public function get(string $name): Driver
+    {
         return $this->drivers[$name] ?? throw new \RuntimeException("Driver '$name' was not registered.");
     }
 
     /**
      * @inheritDoc
      */
-    public function register(Driver $driver, ?string $name = null): void {
+    public function register(Driver $driver, ?string $name = null): void
+    {
         $name = $name ?: $driver::class;
 
         if (isset($this->drivers[$name])) {
@@ -50,7 +53,8 @@ final class DriverManager implements DriverManagerInterface
     /**
      * @inheritDoc
      */
-    public function unregister(string $name): void {
+    public function unregister(string $name): void
+    {
         unset($this->drivers[$name]);
     }
 }
