@@ -11,12 +11,10 @@
 
 namespace Hades;
 
-use Hades\Driver\Driver;
-
 final class DriverManager implements DriverManagerInterface
 {
     /**
-     * @var array<string, \Hades\Driver\Driver> $drivers
+     * @var array<string, \Hades\Driver> $drivers
      */
     private array $drivers = [];
 

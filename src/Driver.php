@@ -9,19 +9,21 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Hades\Tests\Stubs;
+namespace Hades;
 
-use Hades\Driver;
 use Hades\Driver\Connection;
 use SensitiveParameter;
 
-class DummyDriver implements Driver
+interface Driver
 {
     /**
-     * @inheritDoc
+     * Initializes a new connection.
+     *
+     * @param array $params
+     *  The connection parameters.
+     *
+     * @return \Hades\Driver\Connection
+     *  The driver connection.
      */
-    public function connect(#[SensitiveParameter] array $params): Connection
-    {
-        // TODO: Implement connect() method.
-    }
+    public function connect(#[SensitiveParameter] array $params): Connection;
 }

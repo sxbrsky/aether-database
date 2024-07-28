@@ -11,7 +11,7 @@
 
 namespace Hades\Tests\Unit;
 
-use Hades\Driver\Driver;
+use Hades\Driver;
 use Hades\DriverManager;
 use Hades\DriverManagerInterface;
 use Hades\Tests\Stubs\DummyDriver;
@@ -23,23 +23,27 @@ class DriverManagerTest extends TestCase
 {
     private DriverManagerInterface $driverManager;
 
-    public function setUp(): void {
+    public function setUp(): void
+    {
         $this->driverManager = new DriverManager();
     }
 
-    public function testGetThrowsExceptionWhileGetUnregisteredDriver(): void {
+    public function testGetThrowsExceptionWhileGetUnregisteredDriver(): void
+    {
         self::expectException(\RuntimeException::class);
         self::expectExceptionMessage("Driver 'custom-name' was not registered.");
 
         $this->driverManager->get('custom-name');
     }
 
-    public function testRegister(): void {
+    public function testRegister(): void
+    {
         $this->driverManager->register(new DummyDriver());
         self::assertInstanceOf(Driver::class, $this->driverManager->get(DummyDriver::class));
     }
 
-    public function testRegisterWithName(): void {
+    public function testRegisterWithName(): void
+    {
         $driver = new DummyDriver();
         $this->driverManager->register($driver, 'custom-name');
 
@@ -47,7 +51,8 @@ class DriverManagerTest extends TestCase
         self::assertInstanceOf(Driver::class, $this->driverManager->get('custom-name'));
     }
 
-    public function testRegisterThrowsExceptionWhileOverride(): void {
+    public function testRegisterThrowsExceptionWhileOverride(): void
+    {
         self::expectException(\LogicException::class);
         self::expectExceptionMessage("Driver '" . DummyDriver::class . "' is already registered.");
 
@@ -55,14 +60,16 @@ class DriverManagerTest extends TestCase
         $this->driverManager->register(new DummyDriver());
     }
 
-    public function testUnregister(): void {
+    public function testUnregister(): void
+    {
         $this->driverManager->register(new DummyDriver());
         $this->driverManager->unregister(DummyDriver::class);
 
         self::assertEmpty($this->driverManager->all());
     }
 
-    public function testAll(): void {
+    public function testAll(): void
+    {
         $this->driverManager->register(new DummyDriver());
         self::assertCount(1, $this->driverManager->all());
     }
