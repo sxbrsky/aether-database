@@ -9,12 +9,12 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Hades\Tests\Unit;
+namespace Zinc\Tests\Unit;
 
-use Hades\Driver;
-use Hades\DriverManager;
-use Hades\DriverManagerInterface;
-use Hades\Tests\Stubs\DummyDriver;
+use Zinc\Driver;
+use Zinc\DriverManager;
+use Zinc\DriverManagerInterface;
+use Zinc\Tests\Stubs\DummyDriver;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 

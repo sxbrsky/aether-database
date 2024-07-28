@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the nulxrd/hades.
+ * This file is part of the nulxrd/zinc.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *

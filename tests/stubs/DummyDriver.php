@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/hades.
+ * This file is part of the nulxrd/zinc.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,10 +9,10 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Hades\Tests\Stubs;
+namespace Zinc\Tests\Stubs;
 
-use Hades\Driver;
-use Hades\Driver\Connection;
+use Zinc\Driver;
+use Zinc\Driver\Connection;
 use SensitiveParameter;
 
 class DummyDriver implements Driver

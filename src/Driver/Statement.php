@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/hades.
+ * This file is part of the nulxrd/zinc.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Hades\Driver;
+namespace Zinc\Driver;
 
-use Hades\Sql\ParameterType;
+use Zinc\Sql\ParameterType;
 
 interface Statement
 {
@@ -22,7 +22,7 @@ interface Statement
      *  Parameter identifier.
      * @param bool|int|null|resource|string $value
      *  The value to bind to the parameter.
-     * @param \Hades\Sql\ParameterType $type
+     * @param \Zinc\Sql\ParameterType $type
      *  Explicit data type for the parameter.
      *
      * @return bool
@@ -33,7 +33,7 @@ interface Statement
     /**
      * Executes a prepared statement.
      *
-     * @return \Hades\Driver\Result
+     * @return \Zinc\Driver\Result
      *  <b>Statement::execute</b> returns <b>Result</b> object.
      */
     public function execute(): Result;

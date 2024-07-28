@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/hades.
+ * This file is part of the nulxrd/zinc.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,12 +9,12 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Hades;
+namespace Zinc;
 
 final class DriverManager implements DriverManagerInterface
 {
     /**
-     * @var array<string, \Hades\Driver> $drivers
+     * @var array<string, \Zinc\Driver> $drivers
      */
     private array $drivers = [];
 

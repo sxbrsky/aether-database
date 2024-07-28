@@ -1,5 +1,5 @@
 {
-    "name": "nulxrd/hades",
+    "name": "nulxrd/zinc",
     "description": "A high-performance PHP database abstract layer with Object-Oriented API and more many features.",
     "license": "MIT",
     "type": "library",
@@ -15,8 +15,8 @@
         "sqlite"
     ],
     "support": {
-        "issues": "https://github.com/nulxrd/hades/issues",
-        "source": "https://github.com/nulxrd/hades"
+        "issues": "https://github.com/nulxrd/zinc/issues",
+        "source": "https://github.com/nulxrd/zinc"
     },
     "require": {
         "php": ">=8.2"
@@ -30,13 +30,13 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Hades\\": "src/"
+            "Zinc\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hades\\Tests\\Unit\\": "tests/unit/",
-            "Hades\\Tests\\Stubs\\": "tests/stubs/"
+            "Zinc\\Tests\\Unit\\": "tests/unit/",
+            "Zinc\\Tests\\Stubs\\": "tests/stubs/"
         }
     },
     "config": {

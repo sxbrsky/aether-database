@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/hades.
+ * This file is part of the nulxrd/zinc.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Hades\Driver;
+namespace Zinc\Driver;
 
 interface Exception extends \Throwable
 {

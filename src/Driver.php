@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Hades;
+namespace Zinc;
 
-use Hades\Driver\Connection;
+use Zinc\Driver\Connection;
 use SensitiveParameter;
 
 interface Driver
@@ -22,7 +22,7 @@ interface Driver
      * @param array $params
      *  The connection parameters.
      *
-     * @return \Hades\Driver\Connection
+     * @return \Zinc\Driver\Connection
      *  The driver connection.
      */
     public function connect(#[SensitiveParameter] array $params): Connection;

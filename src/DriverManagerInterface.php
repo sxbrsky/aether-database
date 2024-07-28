@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/hades.
+ * This file is part of the nulxrd/zinc.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Hades;
+namespace Zinc;
 
 interface DriverManagerInterface
 {
@@ -27,7 +27,7 @@ interface DriverManagerInterface
      * @param string $name
      *  The name of the driver to retrieve.
      *
-     * @return \Hades\Driver
+     * @return \Zinc\Driver
      *  The driver associated with the given name.
      *
      * @throws \RuntimeException If the driver with the specified name does not exist.
@@ -37,7 +37,7 @@ interface DriverManagerInterface
     /**
      * Registers a new driver.
      *
-     * @param \Hades\Driver $driver
+     * @param \Zinc\Driver $driver
      *  The driver to register.
      * @param string|null $name
      *  Optional name for the driver. If null, a default name will be a class name.
