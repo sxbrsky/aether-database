@@ -14,20 +14,52 @@ namespace Zinc\Driver;
 interface Result
 {
     /**
-     * Fetches the next row from a result set.
+     * Fetches the next row from a result set as an associative array.
      *
-     * @return array<string, mixed>|false
-     *  <b>Result::fetch</b> returns first value of result set or <b>FALSE</b> if there are no more rows.
+     * @return mixed
+     *  The next row of the result set as an associative array, or <b>FALSE</b> if there are no more rows.
      */
-    public function fetch(): false|array;
+    public function fetchAssoc(): mixed;
 
     /**
-     * Returns an array containing all the result set rows.
+     * Fetches the next row from a result set as a numerically indexed array.
+     *
+     * @return mixed
+     *  The next row of the result set as a numerically indexed array, or <b>FALSE</b> if there are no more rows.
+     */
+    public function fetchNumeric(): mixed;
+
+    /**
+     * Fetches the next row from a result set as an object.
+     *
+     * @return mixed
+     *  The next row of the result set as an object, or <b>FALSE</b> if there are no more rows.
+     */
+    public function fetchObject(): mixed;
+
+    /**
+     * Fetches all rows from a result set as an array of associative arrays.
      *
      * @return array<string, mixed>
-     *  <b>Result::fetchAll</b> returns an array containing rows in the result.
+     *  An array of all rows in the result set as associative arrays.
      */
-    public function fetchAll(): array;
+    public function fetchAllAssoc(): array;
+
+    /**
+     * Fetches all rows from a result set as an array of numerically indexed arrays.
+     *
+     * @return array<int, mixed>
+     *  An array of all rows in the result set as numerically indexed arrays.
+     */
+    public function fetchAllNumeric(): array;
+
+    /**
+     * Fetches all rows from a result set as an array of objects.
+     *
+     * @return array<string, object>
+     *  An array of all rows in the result set as objects.
+     */
+    public function fetchAllObject(): array;
 
     /**
      * Returns the number of rows affected by the last SQL statement.
@@ -44,4 +76,11 @@ interface Result
      *  The number of columns in the result. If the columns cannot be counted, <b>Result::columnCount</b> return 0.
      */
     public function columnCount(): int;
+
+    /**
+     * Closes the cursor, enabling the statement to be executed again.
+     *
+     * @return void
+     */
+    public function free(): void;
 }
