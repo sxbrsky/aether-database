@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/hades.
+ * This file is part of the nulxrd/zinc.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -11,12 +11,12 @@
 
 namespace Zinc\Tests\Unit;
 
-use Zinc\Driver;
-use Zinc\DriverManager;
-use Zinc\DriverManagerInterface;
-use Zinc\Tests\Stubs\DummyDriver;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
+use Zinc\Driver;
+use Zinc\Driver\DriverManager;
+use Zinc\Driver\DriverManagerInterface;
+use Zinc\Tests\Stubs\DummyDriver;
 
 #[CoversClass(DriverManager::class)]
 class DriverManagerTest extends TestCase
@@ -31,46 +31,37 @@ class DriverManagerTest extends TestCase
     public function testGetThrowsExceptionWhileGetUnregisteredDriver(): void
     {
         self::expectException(\RuntimeException::class);
-        self::expectExceptionMessage("Driver 'custom-name' was not registered.");
+        self::expectExceptionMessage("Driver 'dummy-driver' was not registered.");
 
-        $this->driverManager->get('custom-name');
+        $this->driverManager->get('dummy-driver');
     }
 
-    public function testRegister(): void
+    public function testAdd(): void
     {
-        $this->driverManager->register(new DummyDriver());
-        self::assertInstanceOf(Driver::class, $this->driverManager->get(DummyDriver::class));
-    }
-
-    public function testRegisterWithName(): void
-    {
-        $driver = new DummyDriver();
-        $this->driverManager->register($driver, 'custom-name');
-
-        self::assertEquals($driver, $this->driverManager->get('custom-name'));
-        self::assertInstanceOf(Driver::class, $this->driverManager->get('custom-name'));
+        $this->driverManager->add('dummy-driver', DummyDriver::class);
+        self::assertInstanceOf(Driver::class, $this->driverManager->get('dummy-driver'));
     }
 
     public function testRegisterThrowsExceptionWhileOverride(): void
     {
         self::expectException(\LogicException::class);
-        self::expectExceptionMessage("Driver '" . DummyDriver::class . "' is already registered.");
+        self::expectExceptionMessage("Driver 'dummy-driver' is already registered.");
 
-        $this->driverManager->register(new DummyDriver());
-        $this->driverManager->register(new DummyDriver());
+        $this->driverManager->add('dummy-driver', DummyDriver::class);
+        $this->driverManager->add('dummy-driver', DummyDriver::class);
     }
 
-    public function testUnregister(): void
+    public function testRemove(): void
     {
-        $this->driverManager->register(new DummyDriver());
-        $this->driverManager->unregister(DummyDriver::class);
+        $this->driverManager->add('dummy-driver', DummyDriver::class);
+        $this->driverManager->remove('dummy-driver');
 
         self::assertEmpty($this->driverManager->all());
     }
 
     public function testAll(): void
     {
-        $this->driverManager->register(new DummyDriver());
+        $this->driverManager->add('dummy-driver', DummyDriver::class);
         self::assertCount(1, $this->driverManager->all());
     }
 }
