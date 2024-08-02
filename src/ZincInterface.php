@@ -103,6 +103,19 @@ interface ZincInterface
     public function fetchAllObject(#[Language('SQL')] string $query, array $params = []): array;
 
     /**
+     * Executes an SQL statement.
+     *
+     * @param non-empty-string $query
+     *  The SQL statement.
+     * @param array<string, mixed>|list<mixed> $params
+     *  An array of parameters to bind to the SQL statement.
+     *
+     * @return int|string
+     *    The number of rows affected by the query.
+     */
+    public function execute(#[Language('SQL')] string $query, array $params = []): int|string;
+
+    /**
      * Initiates a transaction.
      *
      * @return bool
