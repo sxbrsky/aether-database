@@ -4,7 +4,7 @@
 
 ## Support
 
-If you have any questions or need help open an issue on [GitHub Issues](https://github.com/nulxrd/zinc/issues).
+If you have any questions or need help open an issue on [GitHub Issues](https://github.com/sxbrsky/zinc/issues).
 
 ## License
 

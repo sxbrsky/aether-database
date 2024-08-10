@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the nulxrd/zinc.
+ * This file is part of the sxbrsky/zinc.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *

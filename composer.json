@@ -1,5 +1,5 @@
 {
-    "name": "nulxrd/zinc",
+    "name": "sxbrsky/zinc",
     "description": "A high-performance PHP database abstract layer with Object-Oriented API and more many features.",
     "license": "MIT",
     "type": "library",
@@ -15,8 +15,8 @@
         "sqlite"
     ],
     "support": {
-        "issues": "https://github.com/nulxrd/zinc/issues",
-        "source": "https://github.com/nulxrd/zinc"
+        "issues": "https://github.com/sxbrsky/zinc/issues",
+        "source": "https://github.com/sxbrsky/zinc"
     },
     "require": {
         "php": ">=8.2"
