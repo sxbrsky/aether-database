@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,16 +9,16 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc\Driver;
+namespace Sxbrsky\Database\Driver;
 
-use Zinc\Driver;
+use Sxbrsky\Database\Driver;
 
 /**
  * @internal
  */
 final class DriverManager implements DriverManagerInterface
 {
-    /** @var array<string, class-string<\Zinc\Driver>> $drivers */
+    /** @var array<string, class-string<\Sxbrsky\Database\Driver>> $drivers */
     private array $drivers = [];
 
     /**
@@ -32,7 +32,7 @@ final class DriverManager implements DriverManagerInterface
     /**
      * @inheritDoc
      */
-    public function get(string $name): \Zinc\Driver
+    public function get(string $name): \Sxbrsky\Database\Driver
     {
         if (!\array_key_exists($name, $this->drivers)) {
             throw new \RuntimeException("Driver '{$name}' was not registered.");

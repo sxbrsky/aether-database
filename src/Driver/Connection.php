@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc\Driver;
+namespace Sxbrsky\Database\Driver;
 
 use JetBrains\PhpStorm\Language;
 
@@ -21,7 +21,7 @@ interface Connection
      * @param string $sql
      *  The SQL statement to prepare.
      *
-     * @return \Zinc\Driver\Statement
+     * @return \Sxbrsky\Database\Driver\Statement
      *  <b>Connection::prepare</b> returns a <b>Statement</b> object.
      */
     public function prepare(#[Language('SQL')] string $sql): Statement;
@@ -32,7 +32,7 @@ interface Connection
      * @param string $sql
      *  The SQL statement to prepare and execute.
      *
-     * @return \Zinc\Driver\Result
+     * @return \Sxbrsky\Database\Driver\Result
      *  <b>Connection::query</b> returns a <b>Result</b> object.
      */
     public function query(#[Language('SQL')] string $sql): Result;

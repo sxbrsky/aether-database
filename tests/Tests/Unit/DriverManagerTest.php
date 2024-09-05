@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,14 +9,14 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc\Tests\Unit;
+namespace Sxbrsky\Tests\Unit;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
-use Zinc\Driver;
-use Zinc\Driver\DriverManager;
-use Zinc\Driver\DriverManagerInterface;
-use Zinc\Tests\Stubs\DummyDriver;
+use Sxbrsky\Tests\Stubs\DummyDriver;
+use Sxbrsky\Database\Driver;
+use Sxbrsky\Database\Driver\DriverManager;
+use Sxbrsky\Database\Driver\DriverManagerInterface;
 
 #[CoversClass(DriverManager::class)]
 class DriverManagerTest extends TestCase

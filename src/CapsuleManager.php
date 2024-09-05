@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,18 +9,18 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc;
+namespace Sxbrsky\Database;
 
-use Zinc\Driver\DriverManager;
-use Zinc\Driver\DriverManagerInterface;
+use Sxbrsky\Database\Driver\DriverManager;
+use Sxbrsky\Database\Driver\DriverManagerInterface;
 
 /**
- * @phpstan-import-type Params from \Zinc\ZincInterface
+ * @phpstan-import-type Params from \Sxbrsky\Database\CapsuleInterface
  */
-final readonly class ZincManager
+final readonly class CapsuleManager
 {
     /**
-     * @var \Zinc\Driver\DriverManagerInterface $driverManager
+     * @var \Sxbrsky\Database\Driver\DriverManagerInterface $driverManager
      *  The driver manager.
      */
     private DriverManagerInterface $driverManager;
@@ -35,7 +35,7 @@ final readonly class ZincManager
      *
      * @param string $name
      *  The name of the driver.
-     * @param class-string<\Zinc\Driver> $driver
+     * @param class-string<\Sxbrsky\Database\Driver> $driver
      *  The driver class name.
      */
     public function registerDriver(string $name, string $driver): void
@@ -71,7 +71,7 @@ final readonly class ZincManager
      * @param Params $params
      *  The connection parameters.
      *
-     * @return \Zinc\ZincInterface
+     * @return \Sxbrsky\Database\CapsuleInterface
      *  The connection instance.
      *
      * @throws \InvalidArgumentException
@@ -79,7 +79,7 @@ final readonly class ZincManager
      * @throws \Exception
      *  If the specified driver is unsupported.
      */
-    public function getConnection(array $params): \Zinc\ZincInterface
+    public function getConnection(array $params): \Sxbrsky\Database\CapsuleInterface
     {
         if (!isset($params['driver'])) {
             throw new \InvalidArgumentException("Missing 'driver' parameter.");
@@ -91,6 +91,6 @@ final readonly class ZincManager
             throw new \Exception("The given driver '{$params['driver']}' is unsupported.");
         }
 
-        return new Zinc(new $driverClass(), $params);
+        return new Capsule(new $driverClass(), $params);
     }
 }

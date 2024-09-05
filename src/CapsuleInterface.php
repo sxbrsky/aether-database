@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc;
+namespace Sxbrsky\Database;
 
 use JetBrains\PhpStorm\Language;
 
@@ -22,7 +22,7 @@ use JetBrains\PhpStorm\Language;
  *     options?: array
  * }
  */
-interface ZincInterface
+interface CapsuleInterface
 {
     /**
      * Fetches the next row from a result set as an associative array.

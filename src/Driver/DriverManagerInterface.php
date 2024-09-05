@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,7 +9,7 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc\Driver;
+namespace Sxbrsky\Database\Driver;
 
 interface DriverManagerInterface
 {
@@ -27,17 +27,17 @@ interface DriverManagerInterface
      * @param string $name
      *  The name of the driver to retrieve
      *
-     * @return \Zinc\Driver
+     * @return \Sxbrsky\Database\Driver
      *  The driver associated with the given name.
      */
-    public function get(string $name): \Zinc\Driver;
+    public function get(string $name): \Sxbrsky\Database\Driver;
 
     /**
      * Adds a new driver.
      *
      * @param string $name
      *  The name of the driver.
-     * @param class-string<\Zinc\Driver> $driverClass
+     * @param class-string<\Sxbrsky\Database\Driver> $driverClass
      *  The driver class to register.
      */
     public function add(string $name, string $driverClass): void;

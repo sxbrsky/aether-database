@@ -1,5 +1,5 @@
 {
-    "name": "sxbrsky/zinc",
+    "name": "sxbrsky/database",
     "description": "A high-performance PHP database abstract layer with Object-Oriented API and more many features.",
     "license": "MIT",
     "type": "library",
@@ -15,8 +15,8 @@
         "sqlite"
     ],
     "support": {
-        "issues": "https://github.com/sxbrsky/zinc/issues",
-        "source": "https://github.com/sxbrsky/zinc"
+        "issues": "https://github.com/sxbrsky/php-database/issues",
+        "source": "https://github.com/sxbrsky/php-database"
     },
     "require": {
         "php": ">=8.2"
@@ -30,20 +30,17 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Zinc\\": "src/"
+            "Sxbrsky\\Database\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Zinc\\Tests\\Unit\\": "tests/unit/",
-            "Zinc\\Tests\\Stubs\\": "tests/stubs/"
+            "Sxbrsky\\Tests\\": "tests/Tests/",
+            "Sxbrsky\\Performance\\": "tests/Performance/"
         }
     },
     "config": {
         "optimize-autoloader": true,
-        "platform": {
-            "php": "8.2.19"
-        },
         "sort-packages": true
     }
 }

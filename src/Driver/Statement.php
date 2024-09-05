@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,9 +9,9 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc\Driver;
+namespace Sxbrsky\Database\Driver;
 
-use Zinc\Sql\ParameterType;
+use Sxbrsky\Database\Sql\ParameterType;
 
 interface Statement
 {
@@ -22,7 +22,7 @@ interface Statement
      *  Parameter identifier.
      * @param bool|int|null|resource|string $value
      *  The value to bind to the parameter.
-     * @param \Zinc\Sql\ParameterType $type
+     * @param \Sxbrsky\Database\Sql\ParameterType $type
      *  Explicit data type for the parameter.
      *
      * @return bool
@@ -33,7 +33,7 @@ interface Statement
     /**
      * Executes a prepared statement.
      *
-     * @return \Zinc\Driver\Result
+     * @return \Sxbrsky\Database\Driver\Result
      *  <b>Statement::execute</b> returns <b>Result</b> object.
      */
     public function execute(): Result;

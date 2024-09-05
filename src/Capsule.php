@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,18 +9,18 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc;
+namespace Sxbrsky\Database;
 
 /**
- * @phpstan-import-type Params from ZincInterface
+ * @phpstan-import-type Params from CapsuleInterface
  */
-final class Zinc implements ZincInterface
+final class Capsule implements CapsuleInterface
 {
     /**
      * @param Params $params
      */
     public function __construct(
-        protected \Zinc\Driver $driver,
+        protected \Sxbrsky\Database\Driver $driver,
         #[\SensitiveParameter] protected array $params,
     ) {
 

@@ -1,10 +1,11 @@
-# Zinc
+# database
 
-**zinc** is a high-performance PHP database abstract layer with Object-Oriented API and more many features.
+The **Database** component is a high-performance PHP database abstract layer with Object-Oriented API and more many features.
 
-## Support
+## Resources
 
-If you have any questions or need help open an issue on [GitHub Issues](https://github.com/sxbrsky/zinc/issues).
+- [Issues](https://github.com/sxbrsky/php-database/issues/)
+- [Documentation]()
 
 ## License
 

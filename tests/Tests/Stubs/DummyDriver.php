@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,11 +9,11 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc\Tests\Stubs;
+namespace Sxbrsky\Tests\Stubs;
 
-use Zinc\Driver;
-use Zinc\Driver\Connection;
 use SensitiveParameter;
+use Sxbrsky\Database\Driver;
+use Sxbrsky\Database\Driver\Connection;
 
 class DummyDriver implements Driver
 {

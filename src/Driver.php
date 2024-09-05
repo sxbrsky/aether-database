@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the sxbrsky/zinc.
+ * This file is part of the sxbrsky/database.
  *
  * Copyright (C) 2024 Dominik Szamburski
  *
@@ -9,10 +9,10 @@
  * of the MIT license. See the LICENSE file for details.
  */
 
-namespace Zinc;
+namespace Sxbrsky\Database;
 
-use Zinc\Driver\Connection;
 use SensitiveParameter;
+use Sxbrsky\Database\Driver\Connection;
 
 interface Driver
 {
@@ -22,7 +22,7 @@ interface Driver
      * @param array $params
      *  The connection parameters.
      *
-     * @return \Zinc\Driver\Connection
+     * @return \Sxbrsky\Database\Driver\Connection
      *  The driver connection.
      */
     public function connect(#[SensitiveParameter] array $params): Connection;
