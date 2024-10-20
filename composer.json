@@ -1,46 +1,27 @@
 {
-    "name": "sxbrsky/database",
-    "description": "A high-performance PHP database abstract layer with Object-Oriented API and more many features.",
-    "license": "MIT",
-    "type": "library",
-    "keywords": [
-        "database",
-        "mysql",
-        "mariadb",
-        "pgsql",
-        "postgresql",
-        "querybuilder",
-        "pdo",
-        "sql",
-        "sqlite"
-    ],
-    "support": {
-        "issues": "https://github.com/sxbrsky/php-database/issues",
-        "source": "https://github.com/sxbrsky/php-database"
-    },
-    "require": {
-        "php": ">=8.2"
-    },
-    "require-dev": {
-        "friendsofphp/php-cs-fixer": "dev-master",
-        "jetbrains/phpstorm-attributes": "dev-master",
-        "phpstan/phpstan": "2.0.x-dev",
-        "phpunit/phpunit": "^11.4.x-dev"
-    },
-    "minimum-stability": "dev",
-    "autoload": {
-        "psr-4": {
-            "Sxbrsky\\Database\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Sxbrsky\\Tests\\": "tests/Tests/",
-            "Sxbrsky\\Performance\\": "tests/Performance/"
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "sort-packages": true
+  "name": "aether/database",
+  "description": "The Aether database package.",
+  "license": "MIT",
+  "type": "library",
+  "support": {
+    "issues": "https://github.com/sxbrsky/aether/issues",
+    "source": "https://github.com/sxbrsky/aether"
+  },
+  "require": {
+    "php": "^8.2"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Aether\\Database\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Aether\\Tests\\Database\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
 }
